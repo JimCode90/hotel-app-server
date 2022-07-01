@@ -1,11 +1,11 @@
 import express from "express";
 
 //Controladores
-import { showMessage, register } from "../controllers/auth";
+import {login, register} from "../controllers/auth";
 
 const router = express.Router()
-
-router.get('/:message', showMessage)
 router.post('/register', register)
+router.post('/login', login)
+
 
 module.exports = router

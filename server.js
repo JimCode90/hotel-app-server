@@ -10,11 +10,9 @@ const app = express()
 
 //DB: Connection
 mongoose
-    .connect(process.env.DATABASE,{
-        useNewUrlParser: true
-    })
-    .then(() => console.log('DB Connected'))
-    .catch((err) => console.log('DB Connection Error: ', err))
+    .connect(process.env.DATABASE, {})
+    .then(() => console.log("DB connected"))
+    .catch((err) => console.log("DB Error => ", err));
 //middlewares
 app.use(cors())
 app.use(morgan("dev"))
